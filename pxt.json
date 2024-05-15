@@ -7,7 +7,8 @@
         "animation": "*",
         "controller": "*",
         "Timers": "github:microsoft/arcade-timers#v1.1.0",
-        "multiplayer": "*"
+        "multiplayer": "*",
+        "servo": "*"
     },
     "files": [
         "main.blocks",
@@ -33,5 +34,5 @@
     "supportedTargets": [
         "arcade"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "blocksprj"
 }
