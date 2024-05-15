@@ -1,6 +1,6 @@
 {
     "name": "The Dungeon Of Goober - Copy",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "",
     "dependencies": {
         "device": "*",
