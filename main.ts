@@ -4,6 +4,9 @@ enum ActionKind {
     Jumping,
     walkingright
 }
+namespace SpriteKind {
+    export const Sign = SpriteKind.create()
+}
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     if (facing == 1) {
         animation.runImageAnimation(
@@ -90,14 +93,25 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile2`, function (sprite, l
     buttonpress = 1
 })
 let Onemy: Sprite = null
+let EnemyCount = 0
 let summonnow = 0
 let SUMMONER = 0
+let randomspeed = 0
 let buttonpress = 0
 let facing = 0
 let THEGOOBER: Sprite = null
+let tileColumn = 12
+let tileRow = 7
+let signLocation = tiles.getTileLocation(tileColumn, tileRow)
+let signx = tileColumn * 16
+let signy = tileRow * 16
+let sign = sprites.create(assets.image`myImage5`, SpriteKind.Sign)
+sign.x = signx
+sign.y = signy
 namespace Enemys {
     
 }
+let Enemymax = 1
 THEGOOBER = sprites.create(assets.image`Goober1`, SpriteKind.Player)
 controller.moveSprite(THEGOOBER)
 tiles.setCurrentTilemap(tilemap`level`)
@@ -126,7 +140,13 @@ for (let wallz8 of tiles.getTilesByType(sprites.dungeon.greenOuterWest0)) {
     tiles.setWallAt(wallz8, true)
 }
 game.onUpdate(function () {
+    let HALT = 0
     scene.cameraFollowSprite(THEGOOBER)
+    if (THEGOOBER.x >= signx - 20 && THEGOOBER.x <= signx + 20) {
+        sign.sayText(randomspeed)
+    } else {
+        sign.sayText("")
+    }
     if (buttonpress == 1) {
         tiles.setTileAt(tiles.getTileLocation(11, 9), assets.tile`myTile1`)
         SUMMONER = 1
@@ -135,17 +155,15 @@ game.onUpdate(function () {
             tiles.setTileAt(tiles.getTileLocation(11, 9), assets.tile`myTile2`)
         })
     }
-    if (SUMMONER == 1) {
-        SUMMONER = 0
-        if (SUMMONER == 0 && summonnow == 0) {
-            summonnow = 1
-        }
+    if (SUMMONER == 1 && HALT == 0) {
+        summonnow = 1
     }
 })
-game.onUpdateInterval(500, function () {
-    if (summonnow == 1) {
-        summonnow = 2
+game.onUpdateInterval(2000, function () {
+    if (summonnow == 1 && EnemyCount != Enemymax) {
+        randomspeed = randint(30, 45)
+        EnemyCount = EnemyCount + 1
         Onemy = sprites.create(assets.image`myImage4`, SpriteKind.Enemy)
-        Onemy.follow(THEGOOBER)
+        Onemy.follow(THEGOOBER, randomspeed)
     }
 })

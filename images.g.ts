@@ -161,6 +161,38 @@ namespace myImages {
 9 2 2 2 2 2 2 2 2 2 2 2 2 2 2 9 
 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
 `;
+            case "image10":
+            case "myImage5":return img`
+. . . . . . . . . . . . . . . . 
+. f f f f f f f f f f f f f f . 
+. f d d d d d d d d d d d d f . 
+. f d d b b b b d b b b b d f . 
+. f d d d d d d d d d d d d f . 
+. f d b b b b b b d b b d d f . 
+. f d d d d d d d d d d d d f . 
+. f d d b b b d b b b b d d f . 
+. f d d d d d d d d d d d d f . 
+. f f f f f f f f f f f f f f . 
+. . . . . . f e e f . . . . . . 
+. . . . . . f e e f . . . . . . 
+. . . . . . f e e f . . . . . . 
+. . . . . . f e e f . . . . . . 
+. . . . . . f e e f . . . . . . 
+. . . . . . f f f f . . . . . . 
+`;
+            case "image11":
+            case "Enemy1Hitbox":return img`
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+`;
         }
         return null;
     })

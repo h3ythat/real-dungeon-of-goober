@@ -44,6 +44,16 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "myImage4"
     },
+    "image10": {
+        "data": "hwQQABAAAAAAAAAAAAAAAPD/////AAAA8N3d3f0AAADw3b3d/QAAAPC9vb39AAAA8L29vf0AAADwvb29/f////C9vd397u7+8N29vf3u7v7wvd29/f////C9vb39AAAA8L29vf0AAADwvd3d/QAAAPDd3d39AAAA8P////8AAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "myImage5"
+    },
+    "image11": {
+        "data": "hwQKAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Enemy1Hitbox"
+    },
     "uvJT{iQi}^Xb/;?V$iB!": {
         "namespace": "myImages",
         "id": "uvJT{iQi}^Xb/;?V$iB!",
