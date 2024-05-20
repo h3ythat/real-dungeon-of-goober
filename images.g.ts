@@ -193,6 +193,52 @@ namespace myImages {
 . . . . . . . . . . 
 . . . . . . . . . . 
 `;
+            case "image12":
+            case "myImage6":return img`
+. . f f f . . 
+. f f 1 f f . 
+f f 1 1 1 f f 
+f 1 1 1 1 1 f 
+f f f 1 f f f 
+. . f 1 f . . 
+. . f 1 f . . 
+. . f 1 f . . 
+. . f 1 f . . 
+. . f f f . . 
+`;
+            case "image13":
+            case "myImage7":return img`
+. . . . . f f f . . 
+. . . . . f 1 f f . 
+f f f f f f 1 1 f f 
+f 1 1 1 1 1 1 1 1 f 
+f f f f f f 1 1 f f 
+. . . . . f 1 f f . 
+. . . . . f f f . . 
+`;
+            case "image15":
+            case "myImage9":return img`
+. . f f f . . 
+. . f 1 f . . 
+. . f 1 f . . 
+. . f 1 f . . 
+. . f 1 f . . 
+f f f 1 f f f 
+f 1 1 1 1 1 f 
+f f 1 1 1 f f 
+. f f 1 f f . 
+. . f f f . . 
+`;
+            case "image14":
+            case "myImage8":return img`
+. . f f f . . . . . 
+. f f 1 f . . . . . 
+f f 1 1 f f f f f f 
+f 1 1 1 1 1 1 1 1 f 
+f f 1 1 f f f f f f 
+. f f 1 f . . . . . 
+. . f f f . . . . . 
+`;
         }
         return null;
     })

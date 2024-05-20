@@ -54,6 +54,26 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "Enemy1Hitbox"
     },
+    "image12": {
+        "data": "hwQHAAoAAAAA/w8AAAAAAPAfDwAAAAAA/xH///8AAAAfERER8QAAAP8R////AAAA8B8PAAAAAAAA/w8AAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "myImage6"
+    },
+    "image13": {
+        "data": "hwQKAAcAAAAA/w8AAB8PAAAfDwAAHw8AAB8PAP8f/w8fEREP/xHxD/Af/wAA/w8A",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "myImage7"
+    },
+    "image15": {
+        "data": "hwQHAAoAAAAAAPD/AAAAAAAA8PEPAAAA////Ef8AAAAfERER8QAAAP///xH/AAAAAADw8Q8AAAAAAPD/AAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "myImage9"
+    },
+    "image14": {
+        "data": "hwQKAAcAAAAA/w8A8B//AP8R8Q8fEREP/x//DwAfDwAAHw8AAB8PAAAfDwAA/w8A",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "myImage8"
+    },
     "uvJT{iQi}^Xb/;?V$iB!": {
         "namespace": "myImages",
         "id": "uvJT{iQi}^Xb/;?V$iB!",

@@ -6,8 +6,10 @@ enum ActionKind {
 }
 namespace SpriteKind {
     export const Sign = SpriteKind.create()
+    export const arow = SpriteKind.create()
 }
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
+    arrowhere = 0
     if (facing == 1) {
         animation.runImageAnimation(
         THEGOOBER,
@@ -25,6 +27,22 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
         )
     }
 })
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    let playerprojectile: Sprite = null
+    summonProjectile(game.runtime())
+    if (arrowhere == 0) {
+        playerprojectile.setVelocity(0, -150)
+    }
+    if (arrowhere == 2) {
+        playerprojectile.setVelocity(0, 150)
+    }
+    if (arrowhere == 1) {
+        playerprojectile.setVelocity(150, 0)
+    }
+    if (arrowhere == 3) {
+        playerprojectile.setVelocity(-150, 0)
+    }
+})
 controller.down.onEvent(ControllerButtonEvent.Released, function () {
     if (facing == 1) {
         animation.stopAnimation(animation.AnimationTypes.All, THEGOOBER)
@@ -35,7 +53,11 @@ controller.down.onEvent(ControllerButtonEvent.Released, function () {
         THEGOOBER.setImage(assets.image`Goober0`)
     }
 })
+function summonProjectile (time: number) {
+	
+}
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
+    arrowhere = 3
     animation.runImageAnimation(
     THEGOOBER,
     assets.animation`goober left anim`,
@@ -53,6 +75,7 @@ controller.left.onEvent(ControllerButtonEvent.Released, function () {
     THEGOOBER.setImage(assets.image`myImage0`)
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
+    arrowhere = 1
     animation.runImageAnimation(
     THEGOOBER,
     assets.animation`goober right anim`,
@@ -72,6 +95,7 @@ controller.up.onEvent(ControllerButtonEvent.Released, function () {
     }
 })
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
+    arrowhere = 2
     if (facing == 1) {
         animation.runImageAnimation(
         THEGOOBER,
@@ -99,7 +123,9 @@ let SUMMONER = 0
 let randomspeed = 0
 let buttonpress = 0
 let facing = 0
+let arrowhere = 0
 let THEGOOBER: Sprite = null
+let arrow = sprites.create(assets.image`myImage6`, SpriteKind.arow)
 let tileColumn = 12
 let tileRow = 7
 let signLocation = tiles.getTileLocation(tileColumn, tileRow)
@@ -142,6 +168,19 @@ for (let wallz8 of tiles.getTilesByType(sprites.dungeon.greenOuterWest0)) {
 game.onUpdate(function () {
     let HALT = 0
     scene.cameraFollowSprite(THEGOOBER)
+    arrow.setPosition(THEGOOBER.x + 12, THEGOOBER.y)
+    if (arrowhere == 0) {
+        arrow.setImage(assets.image`myImage6`)
+    }
+    if (arrowhere == 1) {
+        arrow.setImage(assets.image`myImage7`)
+    }
+    if (arrowhere == 2) {
+        arrow.setImage(assets.image`myImage9`)
+    }
+    if (arrowhere == 3) {
+        arrow.setImage(assets.image`myImage8`)
+    }
     if (THEGOOBER.x >= signx - 20 && THEGOOBER.x <= signx + 20) {
         sign.sayText(randomspeed)
     } else {
