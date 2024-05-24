@@ -1,5 +1,5 @@
 {
-    "name": "The Dungeon Of Goober - Copy",
+    "name": "The Dungeon Of Goober ",
     "version": "0.0.2",
     "description": "",
     "dependencies": {
@@ -9,7 +9,10 @@
         "Timers": "github:microsoft/arcade-timers#v1.1.0",
         "multiplayer": "*",
         "servo": "*",
-        "tilemaps": "github:microsoft/pxt-tilemaps#v1.12.0"
+        "tilemaps": "github:microsoft/pxt-tilemaps#v1.12.0",
+        "arcade-sprite-data": "github:microsoft/arcade-sprite-data#v0.2.1",
+        "sprite-scaling": "*",
+        "arcade-tile-util": "github:microsoft/arcade-tile-util#v1.2.0"
     },
     "files": [
         "main.blocks",
